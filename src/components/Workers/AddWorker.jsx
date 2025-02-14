@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '../UI/Card'
 import Button from '../UI/Button'
 import ErrorModal from '../UI/ErrorModal';
@@ -8,6 +8,12 @@ const AddWorker = (props) => {
     const [name, setName] = useState("");
     const [wage, setWage] = useState("");
     const [error, setError] = useState();
+
+
+    useEffect(()=>
+        {
+            console.log("çalıştı")
+        },[])
 
     const WorkerNameHander = (e) => {
         setName(e.target.value)
